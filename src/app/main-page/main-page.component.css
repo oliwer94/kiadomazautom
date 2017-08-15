@@ -1,0 +1,118 @@
+.jumbotron-bg {
+    /*background: url("http://res.cloudinary.com/mrcloud/image/upload/q_100/v1472550908/slide-01_vksled.jpg") no-repeat center center, rgba(112, 152, 255, 0.5); */
+    background: url("/assets/images/jumbotron-background.jpeg") no-repeat center center;
+    position: fixed;
+    width: 100%;
+    height: 550px;
+    /*same height as jumbotron */
+    top: 0;
+    left: 0;
+    z-index: -999;   
+  }
+ 
+  /* Medium */
+  @media(min-width:992px) and (max-width:1199px) {
+    .jumbotron-bg {
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  }
+  
+  /* Large */
+  @media(min-width:1200px) {
+    .jumbotron-bg {
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  }
+
+  .jumbotron {
+    position: relative;
+    padding: 0;
+    margin-bottom: 0em;
+    height: 550px;
+    width: 100vw;
+    overflow: hidden;
+    background: transparent;
+      
+    -webkit-transition: all 800ms ease-in-out;
+      -moz-transition: all 800ms ease-in-out;
+      -ms-transition: all 800ms ease-in-out;
+      -o-transition: all 800ms ease-in-out;
+      transition: all 800ms ease-in-out;
+  }
+
+  .jumbotron .p 
+  {
+      color: white;
+  }
+  .jumbotron .container {
+    padding-top: 14em;
+    padding-bottom: 8em;
+    text-align: center;
+  }
+
+/* image hover */
+.profile-img-container {
+  position: relative;
+  display: inline-block; /* added */
+  overflow: hidden; /* added */
+}
+
+.profile-img-container img {width:100%;} /* remove if using in grid system */
+
+
+.profile-img-container img:hover {
+  opacity: 0.5
+}
+.profile-img-container:hover a {
+  opacity: 1; /* added */
+  top: 0; /* added */
+  z-index: 500;
+  margin:5px;
+  opacity:1;
+  background:rgba(0,0,0,0.5) center no-repeat;
+  color:white;
+  cursor: pointer;
+}
+/* added */
+.profile-img-container:hover a span {
+  top: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);  
+}
+/* added */
+.profile-img-container a {
+  display: block;
+  position: absolute;
+  top: -100%;
+  opacity: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  color: inherit;
+}
+.modal-open {overflow-y: auto}
+/* ------------------- */
+
+/* center div */
+.overlay {
+  opacity: 1;
+}
+
+#loading {
+  display: flex;
+  height: 50vh;
+}
+
+#loading img {
+  margin: auto;
+}
+/* ---------------------- */

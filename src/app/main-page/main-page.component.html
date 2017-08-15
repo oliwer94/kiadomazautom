@@ -1,0 +1,370 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="jumbotron-bg"></div>
+  <div class="container">
+    <h1 class="display-3" style="text-align:center; color:orange; margin-top:-100px;">Welcome to {{title}}!</h1>
+    <br><br>
+    <div style="text-align:center;">
+      <div class="col-sm-4" style="margin:auto;">
+        <input type="text" class="form-control" style="margin-bottom:40px;" id="inputPassword" placeholder="Add meg a várost ahol keresni szeretnél ...">
+        <button type="submit" class="btn " style="background-color:orange; color:white">Keresés</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="background:white; border: thin solid #C8C8C8; border-radius: 4px;">
+
+
+  <div class="row  justify-content-end" style="margin-bottom:25px; margin-top: 10px;margin-right: 5px; margin-left: 5px;">
+
+    <div class="col-9" style="background:#E9E9E9; text-align:right; margin-left:5px;margin-right:-5px;">
+      <span>amount per page:</span>
+      <div class="btn-group ml-2">
+        <button type="button" class="btn btn-sm btn-secondary">10</button>
+        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" style="margin-right:40px;" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">20</a>
+          <a class="dropdown-item" href="#">50</a>
+          <a class="dropdown-item" href="#">100</a>
+          <a class="dropdown-item" href="#">All</a>
+        </div>
+      </div>
+
+      <span>choose view:</span>
+
+      <button type="button" (click)="enableListView()" class="btn btn-default" aria-label="Left Align" style="background:#E9E9E9; border-radius:0px;">
+            <span ><i class="fa fa-list" aria-hidden="true"></i></span>
+      </button>
+      <button type="button" (click)="enableCardView()" class="btn btn-default" aria-label="Left Align" style="background:#E9E9E9; border-radius:0px; margin-right:40px;">
+              <span ><i class="fa fa-th-large" aria-hidden="true"></i></span>
+      </button>
+
+      <span>order By:</span>
+      <div class="btn-group ml-2">
+        <button type="button" class="btn btn-sm btn-secondary">Price Asc</button>
+        <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Name Asc</a>
+          <a class="dropdown-item" href="#">Name Dsc</a>
+          <a class="dropdown-item" href="#">Price Dsc</a>
+          <a class="dropdown-item" href="#">Rating</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row " style="margin-bottom:25px; margin-top: 10px; margin-right: 5px; margin-left: 5px;">
+    <div class="col-3" id="sidebar" name="sidebar" style="max-height:970px; border: thin solid #C8C8C8; border-radius: 4px;">
+      <p style="margin-bottom:-15px;margin-top:10px;">Ár:</p>
+      <br>
+      <form class="form-inline">
+        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" style="max-width:95px;" id="inlineFormInput" placeholder="Min">
+        <input type="text" class="form-control" id="inlineFormInputGroup" style="max-width:95px; margin-right:17px;" placeholder="Max">
+        <button type="submit" class="btn btn-primary" style="max-width:20px;padding-left:9px;">> </button>
+      </form>
+      <br>
+      <hr style="margin-top:0px;">
+      <p style="margin-bottom:-15px;">Kaukció:</p>
+      <br>
+      <form class="form-inline">
+        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" style="max-width:95px;" id="inlineFormInput" placeholder="Min">
+        <input type="text" class="form-control" id="inlineFormInputGroup" style="max-width:95px; margin-right:17px;" placeholder="Max">
+        <button type="submit" class="btn btn-primary" style="max-width:20px;padding-left:9px;">> </button>
+      </form>
+      <br>
+      <hr style="margin-top:0px;">
+      <p style="margin-bottom:-15px;">Utasok száma:</p>
+      <br>
+      <form class="form-inline">
+        <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" style="max-width:95px;" id="inlineFormInput" placeholder="Min">
+        <button type="submit" class="btn btn-primary" style="max-width:20px;padding-left:9px;">> </button>
+      </form>
+      <br>
+      <hr style="margin-top:0px;">
+      <p style="margin-bottom:-15px;">Márka:</p>
+      <br>
+      <ul class="list-group" style="overflow-y:scroll; max-height:155px;">
+        <li class="list-group-item justify-content-between" style="min-height:40px;max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Aston Martin </span>
+                  </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+        <li class="list-group-item justify-content-between" style="min-height:40px;max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Audi </span>
+                  </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+        <li class="list-group-item justify-content-between" style="min-height:40px;max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Ford </span>
+                  </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+        <li class="list-group-item justify-content-between" style="min-height:40px;max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Mercedes </span>
+                    </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+        <li class="list-group-item justify-content-between" style="min-height:40px;max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input">
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Nissan </span>
+                        </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+        <li class="list-group-item justify-content-between" style="min-height:40px;max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Peugeot </span>
+                          </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+        <li class="list-group-item justify-content-between" style="min-height:40px;max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Skoda </span>
+                      </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+      </ul>
+      <br>
+      <hr style="margin-top:0px;">
+      <p style="margin-bottom:-15px;">Váltó:</p>
+      <br>
+      <ul class="list-group">
+        <li class="list-group-item justify-content-between" style="max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Autómatikus </span>
+                  </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+        <li class="list-group-item justify-content-between" style="max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Manuális </span>
+                  </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+      </ul>
+      <br>
+      <hr style="margin-top:0px;">
+      <p style="margin-bottom:-15px;">Üzemanyag:</p>
+      <br>
+      <ul class="list-group">
+        <li class="list-group-item justify-content-between" style="max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Benzin </span>
+                  </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+        <li class="list-group-item justify-content-between" style="max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Diesel </span>
+                  </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+        <li class="list-group-item justify-content-between" style="max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Elektromos </span>
+                  </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+        <li class="list-group-item justify-content-between" style="max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">Földgáz </span>
+                    </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+        <li class="list-group-item justify-content-between" style="max-height:40px;">
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input">
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-description">Autógáz </span>
+                      </label>
+          <span class="badge badge-default badge-pill">14</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document" style="margin-left:200px; min-width:80vw;">
+        <div class="row">
+          <div class="col-2">
+            <div class="row">
+              <div class="col-12">
+                <img class="img-thumbnail img-circle img-responsive" src="http://placekitten.com/180/200" />
+              </div>
+              <div class="col-12" style="margin-top:10px;">
+                <img class="img-thumbnail img-circle img-responsive" src="http://placekitten.com/180/200" />
+              </div>
+              <div class="col-12" style="margin-top:10px;">
+                <img class="img-thumbnail img-circle img-responsive" src="http://placekitten.com/180/200" />
+              </div>
+              <div class="col-12" style="margin-top:10px;">
+                <img class="img-thumbnail img-circle img-responsive" src="http://placekitten.com/180/200" />
+              </div>
+            </div>
+          </div>
+          <div class="col-10" style="border: thin solid #C8C8C8;margin-left:5px;margin-right:-20px; border-radius: 4px; ">
+            <img src="/assets/images/skoda.jpg" class="img-responsive" style="max-width: 100%;  max-height: 100%; display: block; margin-top: auto; margin-bottom: auto;" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- List View template -->
+    <div class="col-9" id="contentPage" name="contentPage" *ngIf="listView" style="border: thin solid #C8C8C8; margin-left:5px;margin-right:-5px; border-radius: 4px;">
+
+      <div *ngFor="let entry of carList" class="col" style="border: thin solid #C8C8C8; border-radius: 4px; margin-top:10px;">
+        <div class="row">
+          <div class="col-4" style="margin-top:10px;border-right: thin solid rgba(0,0,0,.5);">
+            <form>
+              <div class="form-group row" style="margin-bottom:0px;">
+                <label class="col-sm-4 col-form-label">Váltó:</label>
+                <div class="col-sm-8">
+                  <p class="form-control-static">Manuális</p>
+                </div>
+              </div>
+              <hr style="margin-bottom:5px;margin-top:5px;">
+              <div class="form-group row" style="margin-bottom:0px;">
+                <label class="col-sm-4 col-form-label">Ü.anyag:</label>
+                <div class="col-sm-8">
+                  <p class="form-control-static">Benzines</p>
+                </div>
+              </div>
+              <hr style="margin-bottom:5px;margin-top:5px;">
+              <div class="form-group row" style="margin-bottom:0px;">
+                <label class="col-sm-5 col-form-label">No.of Pass:</label>
+                <div class="col-sm-7">
+                  <p class="form-control-static">4</p>
+                </div>
+              </div>
+              <hr style="margin-bottom:5px;margin-top:5px;">
+            </form>
+          </div>
+          <div class="col-4" style="margin-top:10px;border-right: thin solid rgba(0,0,0,.5);">
+            <form>
+              <div class="form-group row" style="margin-bottom:0px;">
+                <label class="col-sm-4 col-form-label">Type:</label>
+                <div class="col-sm-8">
+                  <p class="form-control-static">sedan</p>
+                </div>
+              </div>
+              <hr style="margin-bottom:5px;margin-top:5px;">
+              <div class="form-group row" style="margin-bottom:0px;">
+                <label class="col-sm-4 col-form-label">Kaukció:</label>
+                <div class="col-sm-8">
+                  <p class="form-control-static">30.000 Ft.</p>
+                </div>
+              </div>
+              <hr style="margin-bottom:5px;margin-top:5px;">
+              <div class="form-group row" style="margin-bottom:0px;">
+                <label class="col-sm-4 col-form-label">Ár:</label>
+                <div class="col-sm-8">
+                  <p class="form-control-static">4000 Ft/Nap</p>
+                </div>
+              </div>
+              <hr style="margin-bottom:5px;margin-top:5px;">
+            </form>
+          </div>
+          <div class="col-4">
+            <!--  <img src="/assets/images/skoda.jpg" alt="skoda View" style=" margin-top:10px; max-width: 100%;  max-height: 100%;"> -->
+            <div class="profile-img-container">
+              <img src="/assets/images/skoda.jpg" class="img-thumbnail img-circle img-responsive" />
+              <a><span class="fa fa-search-plus fa-5x" data-toggle="modal" data-target="#myModal"></span></a>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <span>Leírás:</span>
+        <p>
+          Az ár sofőrrel értendő. Bőrön kívül full. extra. a 100 km-en felül, pedig +km esetén, 280 Ft / km Pest megyében Az ár nem
+          tartalmazza az üzemanyag költséget, és az utazással kapcsolatos járulékokat.
+        </p>
+      </div>
+    </div>
+    <!-- Card View template -->
+    <div class="col-9" id="contentPage" name="contentPage" *ngIf="!listView" style="margin-left:5px;margin-right:-5px; border-radius: 4px;">
+      <div class="row">
+        <div *ngFor="let entry of carList" class="col-4" style="border: thin solid #C8C8C8;border: thin solid #C8C8C8; margin-left:2px;margin-bottom:2px; max-width:270px;">
+          <div class="row">
+            <div class="col">
+              <img src="/assets/images/skoda.jpg" alt="skoda View" style=" margin-top:10px; max-width: 100%;  max-height: 100%;">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col" style="margin-top:10px;">
+              <form>
+                <hr style="margin-bottom:5px;margin-top:5px;">
+                <div class="form-group row" style="margin-bottom:0px;">
+                  <label class="col-sm-4 col-form-label">Kaukció:</label>
+                  <div class="col-sm-8">
+                    <p class="form-control-static">30.000 Ft.</p>
+                  </div>
+                </div>
+                <hr style="margin-bottom:5px;margin-top:5px;">
+                <div class="form-group row" style="margin-bottom:0px;">
+                  <label class="col-sm-4 col-form-label">Ár:</label>
+                  <div class="col-sm-8">
+                    <p class="form-control-static">4000 Ft/Nap</p>
+                  </div>
+                </div>
+                <hr style="margin-bottom:5px;margin-top:5px;">
+              </form>
+            </div>
+          </div>
+          <p style="font-size:10px;">
+            Az ár sofőrrel értendő. Bőrön kívül full. extra. a 100 km-en felül, pedig +km esetén, 280 Ft / km Pest megyében Az ár nem
+            tartalmazza az üzemanyag költséget, és az utazással kapcsolatos járulékokat.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end template -->
+  </div>
+</div>

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Kiadomazautom</title>
@@ -7,8 +8,60 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+    crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <script src='/assets/js/password-strength.js'></script>
+  <script src='/assets/js/image-picker.js'></script>
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
+<script>
+  var jumboHeight = $('.jumbotron').outerHeight();
+  function parallax() {
+    var scrolled = $(window).scrollTop();
+    $('.jumbotron-bg').css('height', (jumboHeight - scrolled) + 'px');
+  }
+  var eTop = $('#sidebar').offset().top;
+  $(window).scroll(function (e) {
+    parallax();
+    console.log(eTop);
+    if (eTop === undefined)
+    { eTop = $('#sidebar').offset().top; }
+    moveSideBar();
+  });
+
+  function moveSideBar() {
+
+    var $el = $('#contentPage');
+    var cBottom = $el.position().top + $el.outerHeight(true);
+
+    if (($(window).scrollTop() - eTop) > (-20) && ($(window).scrollTop() - eTop) + 1043 < cBottom) {
+      $('#sidebar').css('top', ($(window).scrollTop() - eTop + 20) + 'px');
+    }
+    if (($(window).scrollTop() - eTop) < (-20)) {
+      $('#sidebar').css('top', 0 + 'px');
+    }
+    if (($(window).scrollTop() - eTop) + 1043 > cBottom) {
+      $('#sidebar').css('top', cBottom - 1043 + 'px');
+    }
+  };
+
+ 
+
+</script>
+
 </html>

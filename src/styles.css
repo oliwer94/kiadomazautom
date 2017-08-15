@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+footer {
+    background-color:rgba(14, 15, 15, 0.42);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 130px;
+    width: 100%;
+    overflow:hidden;
+    text-align:center;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 130px; /* bottom = footer height */
+    padding: 0 0 25px;
+    background: #E9E9E9;
+}
+
+
+
+  
