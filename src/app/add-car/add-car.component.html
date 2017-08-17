@@ -57,8 +57,8 @@
       </div>
     </div>
 
-    <!-- List View template -->
-    <div class="col-9" style="border: thin solid #C8C8C8;margin-left:5px;margin-right:-5px; border-radius: 4px;">
+    <!-- Main template -->
+    <div class="col-9" style="margin-left:5px;margin-right:-5px;">
       <div style="text-align:center;margin-top:20px;">
         <h1>Add Car</h1>
         <br>
@@ -66,107 +66,113 @@
         <br>
       </div>
       <div class="row">
+
+        <!--left row -->
         <div class="col-6" style="border: thin solid #C8C8C8;margin-left:5px;margin-right:-5px; border-radius: 4px;">
-          <form>
+          <form style="margin-top:20px;">
             <div class="form-group row">
-              <label for="inputName" class="col-sm-2 col-form-label">Title</label>
+              <label for="inputHouseNumber" class="col-sm-2 col-form-label">Gyártó</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputHouseNumber" placeholder="Házszám">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputName" class="col-sm-2 col-form-label">Modell</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputName" placeholder="Peugeot 302">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail" class="col-sm-2 col-form-label">Kivitel</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Hatchback">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputCountry" class="col-sm-2 col-form-label">Váltó</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputCountry" placeholder="Ország">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputRegion" class="col-sm-2 col-form-label">Ü.Anyag</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputRegion" placeholder="Megye">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputCity" class="col-sm-2 col-form-label">Gyártás Év</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputCity" placeholder="Város">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputStreet" class="col-sm-2 col-form-label">Color</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputStreet" placeholder="Utca">
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!--left row -->
+        <div class="col-6" style="border: thin solid #C8C8C8;margin-left:5px;margin-right:-5px; border-radius: 4px;">
+          <form style="margin-top:20px;">
+            <div class="form-group row">
+              <label for="inputName" class="col-sm-2 col-form-label">No.Of Pass</label>
               <div class="col-sm-10">
                 <input type="email" class="form-control" id="inputName" placeholder="Name">
               </div>
             </div>
             <div class="form-group row">
-              <label for="inputEmail" class="col-sm-2 col-form-label">Category</label>
+              <label for="inputEmail" class="col-sm-2 col-form-label">Csomag t. méret</label>
               <div class="col-sm-10">
                 <input type="email" class="form-control" id="inputEmail" placeholder="Email">
               </div>
             </div>
 
             <div class="form-group row">
-              <label for="inputCountry" class="col-sm-2 col-form-label">Price</label>
+              <label for="inputCountry" class="col-sm-2 col-form-label">Dohányzó</label>
               <div class="col-sm-10">
                 <input type="email" class="form-control" id="inputCountry" placeholder="Ország">
               </div>
             </div>
             <div class="form-group row">
-              <label for="inputRegion" class="col-sm-2 col-form-label">Deposit</label>
+              <label for="inputRegion" class="col-sm-2 col-form-label">animal</label>
               <div class="col-sm-10">
                 <input type="email" class="form-control" id="inputRegion" placeholder="Megye">
               </div>
             </div>
             <div class="form-group row">
-              <label for="inputCity" class="col-sm-2 col-form-label">Város</label>
+              <label for="inputCity" class="col-sm-2 col-form-label">Door count</label>
               <div class="col-sm-10">
                 <input type="email" class="form-control" id="inputCity" placeholder="Város">
               </div>
             </div>
-            <div class="form-group row">
-              <label for="inputStreet" class="col-sm-2 col-form-label">Utca</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputStreet" placeholder="Utca">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="inputHouseNumber" class="col-sm-2 col-form-label">Házszám</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputHouseNumber" placeholder="Házszám">
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="col-6" style="border: thin solid #C8C8C8;margin-left:5px;margin-right:-5px; border-radius: 4px;">
-          <form>
-            <div class="form-group row">
-              <label for="inputName" class="col-sm-2 col-form-label">Name</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputName" placeholder="Name">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-              </div>
-            </div>
 
-            <div class="form-group row">
-              <label for="inputCountry" class="col-sm-2 col-form-label">Ország</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputCountry" placeholder="Ország">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="inputRegion" class="col-sm-2 col-form-label">Megye</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputRegion" placeholder="Megye">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="inputCity" class="col-sm-2 col-form-label">Város</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputCity" placeholder="Város">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="inputStreet" class="col-sm-2 col-form-label">Utca</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputStreet" placeholder="Utca">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="inputHouseNumber" class="col-sm-2 col-form-label">Házszám</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputHouseNumber" placeholder="Házszám">
-              </div>
-            </div>
           </form>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col" style="border: thin solid #C8C8C8;margin-left:5px;margin-right:-5px; border-radius: 4px; margin-top:30px;margin-bottom:30px;">
-          
+      <div class="row" style="margin-bottom:20px;margin-top:20px;">
+        <div class="col" style=" border: thin solid #C8C8C8;margin-left:5px;margin-right:-5px; border-radius: 4px;">
+          <div class="form-group" style="margin-top:10px;">
+            <label for="exampleTextarea">Extrák</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          </div>
         </div>
       </div>
+      <div class="row" style="margin-bottom:20px;margin-top:20px;">
+        <div class="col" style=" border: thin solid #C8C8C8;margin-left:5px;margin-right:-5px; border-radius: 4px;">
+          <label for="belowDiv" style="margin-top:10px;">Képek</label>
+          <div class="col" id="belowDiv" style="min-height:100px; border: thin solid #C8C8C8;margin-left:5px;margin-right:-5px; border-radius: 4px; margin-bottom:20px;">
+            <image-upload [max]="4" [extensions]="['jpeg','png']" [class]="customClass"></image-upload>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-bottom:20px;">
+        <button type="button" class="btn btn-primary">Add car</button>
+      </div>   
     </div>
   </div>
 </div>

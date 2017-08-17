@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router'
 
 import { StarRatingModule } from 'angular-star-rating';
+import { ImageUploadModule } from "angular2-image-upload";
 
 import { AppComponent } from './app.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
@@ -31,6 +32,7 @@ import { AddCarComponent } from './add-car/add-car.component';
   imports: [
     BrowserModule,
     StarRatingModule.forRoot(),
+    ImageUploadModule.forRoot(),
     RouterModule.forRoot([
       {
         path:'',

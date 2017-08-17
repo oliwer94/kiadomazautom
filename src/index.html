@@ -23,45 +23,55 @@
   <script src='https://www.google.com/recaptcha/api.js'></script>
   <script src='/assets/js/password-strength.js'></script>
   <script src='/assets/js/image-picker.js'></script>
+
+
+
 </head>
 
 <body>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-104746628-1', 'auto');
+  </script>
   <app-root></app-root>
 </body>
 
 <script>
-  var jumboHeight = $('.jumbotron').outerHeight();
-  function parallax() {
-    var scrolled = $(window).scrollTop();
-    $('.jumbotron-bg').css('height', (jumboHeight - scrolled) + 'px');
-  }
-  var eTop = $('#sidebar').offset().top;
-  $(window).scroll(function (e) {
-    parallax();
-    console.log(eTop);
-    if (eTop === undefined)
-    { eTop = $('#sidebar').offset().top; }
-    moveSideBar();
-  });
+        var jumboHeight = $('.jumbotron').outerHeight();
+        function parallax() {
+          var scrolled = $(window).scrollTop();
+          $('.jumbotron-bg').css('height', (jumboHeight - scrolled) + 'px');
+        }
+        var eTop = $('#sidebar').offset().top;
+        $(window).scroll(function (e) {
+          parallax();
+          console.log(eTop);
+          if (eTop === undefined)
+          { eTop = $('#sidebar').offset().top; }
+          moveSideBar();
+        });
 
-  function moveSideBar() {
+        function moveSideBar() {
 
-    var $el = $('#contentPage');
-    var cBottom = $el.position().top + $el.outerHeight(true);
+          var $el = $('#contentPage');
+          var cBottom = $el.position().top + $el.outerHeight(true);
 
-    if (($(window).scrollTop() - eTop) > (-20) && ($(window).scrollTop() - eTop) + 1043 < cBottom) {
-      $('#sidebar').css('top', ($(window).scrollTop() - eTop + 20) + 'px');
-    }
-    if (($(window).scrollTop() - eTop) < (-20)) {
-      $('#sidebar').css('top', 0 + 'px');
-    }
-    if (($(window).scrollTop() - eTop) + 1043 > cBottom) {
-      $('#sidebar').css('top', cBottom - 1043 + 'px');
-    }
-  };
-
- 
+          if (($(window).scrollTop() - eTop) > (-20) && ($(window).scrollTop() - eTop) + 933 < cBottom) {
+            $('#sidebar').css('top', ($(window).scrollTop() - eTop + 20) + 'px');
+          }
+          if (($(window).scrollTop() - eTop) < (-20)) {
+            $('#sidebar').css('top', 0 + 'px');
+          }
+          if (($(window).scrollTop() - eTop) + 933 > cBottom) {
+            $('#sidebar').css('top', cBottom - 933 + 'px');
+          }
+        };
 
 </script>
-
 </html>
